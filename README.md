@@ -100,30 +100,38 @@ const Franchises = {
 ## Organización
 
 <ul>
-<li> [] Ordenar </li>
+<li> [] General </li>
 [] Desplegar el servidor<br>
 [] Desplegar la base de datos<br>
-[] Proteger las variables de entorno<br>
-[] JWT caducidad 1 hora<br>
-[] Servidor 401 para el usuario no identificado<br>
-[] API limitada a 50 peticiones cada 3 minutos<br>
-<li> [✅] README </li>
+[✅] Proteger las variables de entorno<br>
+
+<li> [] README </li>
 [] Añadir el endpoint correcto<br>
 [] Añadir los modelos correctos<br>
 [] Revisar que es correcto<br>
-<li> [✅] index → Almacenar archivos que actúan como puntos de entrada o partes del sistema</li>
+
+<li> [] index → Almacenar archivos que actúan como puntos de entrada o partes del sistema</li>
 [✅] Middleware declarado<br>
 [✅] Middleware para errores declarado<br>
 [✅] Puerto establecido <br>
 [✅] Enlaces realizados<br>
-<li> [✅] config → Archivos con configuraciones</li>
+[] API limitada a 50 peticiones cada 3 minutos<br>
+[] Resto de protecciones a nuestro servidor<br>
+
+<li> [] config → Archivos con configuraciones</li>
 [✅] Configuración establecida<br>
 [✅] Si no funciona recuerda probar la otra ruta<br>
-<li> [✅] models → Modelos para representar la estructura de los datos</li>
+[✅] JWT caducidad 1 hora<br>
+[] Código JWT aplicado<br>
+[] password doc added<br>
+[] password resolve<br>
+
+<li> [] models → Modelos para representar la estructura de los datos</li>
 [✅] Modelo artefactos<br>
 [✅] Modelo franquicias<br>
 [] Modelo users<br>
-<li> [✅] repositories → Conjunto de funciones con las querys para traer la información</li>
+
+<li> [] repositories → Conjunto de funciones con las querys para traer la información</li>
 [✅] GET all artifacts<br>
 [✅] GET one artifacts<br>
 [✅] POST artifacts<br>
@@ -139,7 +147,8 @@ const Franchises = {
 [✅] PUT to change the franchise's sciFiartifact<br>
 [✅] PUT to update SciFiArtifact's Franchise<br>
 [] Enlaces realizados<br>
-<li> [✅] controllers → Conjunto de funcionalidades</li>
+
+<li> [] controllers → Conjunto de funcionalidades</li>
 [✅] GET all artifacts<br>
 [✅] GET one artifacts<br>
 [✅] POST artifacts<br>
@@ -155,7 +164,14 @@ const Franchises = {
 [✅] PUT to change the franchise's sciFiartifact<br>
 [✅] PUT to update SciFiArtifact's Franchise<br>
 [] Enlaces realizados<br>
-<li> [✅] routes → Enrutado de la aplicación</li>
+
+<li> [] middlewares </li>
+[] authenticated middlewares<br>
+[] Servidor 401 para el usuario no identificado<br>
+[] uploadFile middlewares<br>
+[] Enlaces realizados<br>
+
+<li> [] routes → Enrutado de la aplicación</li>
 [✅] index con el router scifiartifacts establecido<br>
 [✅] index con el router franchises establecido<br>
 [✅] index con el router populated establecido<br>
