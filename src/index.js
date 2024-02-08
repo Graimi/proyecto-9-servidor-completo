@@ -3,6 +3,7 @@ require('dotenv').config();
 // Creamos el soporte para peticiones
 const mainRouter = require('./api/routes/indexRouter');
 const connectDB = require('./config/db');
+const { setError } = require('./config/error');
 
 const app = express();
 
@@ -15,12 +16,14 @@ app.use('/api', mainRouter);
 
 // Controlador de rutas no encontradas
 app.use('*', (req, res, next) => {
-  res.status(404).json({ data: 'Not found' });
+  return next(setError(404, 'Not Found'));
 });
 
 // Controlador de errores generales del servidor
 app.use((error, req, res, next) => {
-  res.status(500).json({ data: 'Internal Server Error' });
+  return res
+    .status(error.status || 500)
+    .json(error.message || 'Internal Server Error');
 });
 
 // Establecemos el puerto

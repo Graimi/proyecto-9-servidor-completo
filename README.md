@@ -119,12 +119,13 @@ const Franchises = {
 [] Resto de protecciones a nuestro servidor<br>
 
 <li> [] config → Archivos con configuraciones</li>
-[✅] Configuración establecida<br>
+[✅] Configuración establecida con mongo atlas<br>
 [✅] Si no funciona recuerda probar la otra ruta<br>
 [✅] JWT caducidad 1 hora<br>
 [] Código JWT aplicado<br>
 [] password doc added<br>
 [] password resolve<br>
+
 
 <li> [] models → Modelos para representar la estructura de los datos</li>
 [✅] Modelo artefactos<br>
