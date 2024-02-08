@@ -4,7 +4,7 @@ const {
   getFranchiseAndRelated,
   updateFranchiseofScifiArtifact,
   updateScifiArtifactsInFranchise,
-} = require('../../controllers/populated');
+} = require('../controllers/populated');
 
 const populatedRouter = express.Router();
 

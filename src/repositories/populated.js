@@ -1,4 +1,4 @@
-const { SciFiArtifact, Franchise } = require('../../src/models/mongo');
+const { SciFiArtifact, Franchise } = require('../api/models/mongo');
 
 const getSciFiArtifactAndRelatedFromDB = async (id) => {
   const sciFiArtifact = await SciFiArtifact.findById(id).populate({

@@ -1,9 +1,13 @@
 const express = require('express');
-require('./config/db');
+require('dotenv').config();
 // Creamos el soporte para peticiones
-const mainRouter = require('./routes/index');
+const mainRouter = require('./api/routes/indexRouter');
+const connectDB = require('./config/db');
 
 const app = express();
+
+connectDB();
+
 app.use(express.json());
 
 // Creamos el middleware de las rutas en /api
@@ -18,7 +22,6 @@ app.use('*', (req, res, next) => {
 app.use((error, req, res, next) => {
   res.status(500).json({ data: 'Internal Server Error' });
 });
-
 
 // Establecemos el puerto
 const PORT = 4001;

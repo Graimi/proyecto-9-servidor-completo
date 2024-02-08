@@ -5,7 +5,7 @@ const {
   createFranchises,
   updateFranchiseById,
   deleteFranchise,
-} = require('../../controllers/franchises');
+} = require('../controllers/franchises');
 
 const franchisesRouter = express.Router();
 

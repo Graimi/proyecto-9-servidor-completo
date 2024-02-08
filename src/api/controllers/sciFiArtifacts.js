@@ -4,7 +4,7 @@ const {
   createSciFiArtifactInDB,
   updateSciFiArtifactInDB,
   deleteSciFiArtifactInDB,
-} = require('../repositories/sciFiArtifacts');
+} = require('../../repositories/sciFiArtifacts');
 
 const getAllSciFiArtifacts = async (req, res, next) => {
   const { filter } = req.query;

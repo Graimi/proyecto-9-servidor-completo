@@ -5,7 +5,7 @@ const {
   createSciFiArtifacts,
   updateSciFiArtifactById,
   deleteSciFiArtifact,
-} = require('../../controllers/sciFiArtifacts');
+} = require('../controllers/sciFiArtifacts');
 
 const sciFiArtifactsRouter = express.Router();
 

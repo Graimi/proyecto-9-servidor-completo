@@ -14,6 +14,8 @@ const sciFiArtifactSchema = new mongoose.Schema({
     establishedYear: String,
     artifacts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'SciFiArtifact' }],
   });
+
+  // crear modelo users
   
   const SciFiArtifact = mongoose.model('SciFiArtifact', sciFiArtifactSchema);
   const Franchise = mongoose.model('Franchise', franchiseSchema);

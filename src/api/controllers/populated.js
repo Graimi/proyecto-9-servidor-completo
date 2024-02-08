@@ -3,7 +3,7 @@ const {
   getFranchiseAndRelatedFromDB,
   updateFranchiseofScifiArtifactInDB,
   updateScifiArtifactsInFranchiseinDB,
-} = require('../repositories/populated');
+} = require('../../repositories/populated');
 
 const getSciFiArtifactAndRelated = async (req, res, next) => {
   const { id } = req.params;

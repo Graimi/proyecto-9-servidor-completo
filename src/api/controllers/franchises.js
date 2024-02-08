@@ -4,7 +4,7 @@ const {
   createFranchiseInDB,
   updateFranchiseInDB,
   deleteFranchiseInDB,
-} = require('../repositories/franchises');
+} = require('../../repositories/franchises');
 
 const getAllFranchises = async (req, res, next) => {
   const { filter } = req.query;
