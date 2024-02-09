@@ -71,7 +71,7 @@ const Franchises = {
 <ul>
 
 []  **El servidor y la base de datos deben estar desplegados**, no necesitamos que corran en ningún puerto en específico ya que debes proveernos de una URL para probar el servidor.<br>
-[]  Tendremos acceso al código en Github, asegúrate de nos subir variables de entorno a la plataforma.<br>
+[]  Tendremos acceso al código en Github, asegúrate de no subir variables de entorno a la plataforma.<br>
 []  Debes tener un modelo `User` que cuente con endpoints para: <br>
 
 <ul>
@@ -102,7 +102,7 @@ const Franchises = {
 <ul>
 <li> [] General </li>
 [] Desplegar el servidor<br>
-[] Desplegar la base de datos<br>
+[✅] Desplegar la base de datos<br>
 [✅] Proteger las variables de entorno<br>
 
 <li> [] README </li>
@@ -147,6 +147,8 @@ const Franchises = {
 [✅] GET franchise and sciFiartifacts related<br>
 [✅] PUT to change the franchise's sciFiartifact<br>
 [✅] PUT to update SciFiArtifact's Franchise<br>
+[] User repositories<br>
+[] Tipo GET públicos, resto solo con usuario logeado (entiendo que añadiendo antes login o auth)<br>
 [] Enlaces realizados<br>
 
 <li> [] controllers → Conjunto de funcionalidades</li>
@@ -164,6 +166,8 @@ const Franchises = {
 [✅] GET franchise and sciFiartifacts related<br>
 [✅] PUT to change the franchise's sciFiartifact<br>
 [✅] PUT to update SciFiArtifact's Franchise<br>
+[] User controllers<br>
+[] Tipo GET públicos, resto solo con usuario logeado (entiendo que añadiendo antes login o auth)<br>
 [] Enlaces realizados<br>
 
 <li> [] middlewares </li>
@@ -184,5 +188,6 @@ const Franchises = {
 [] /auth/login endpoint<br>
 [] /auth/avatar endpoint<br>
 [] endpoint para subir imagen<br>
+[] Tipo GET públicos, resto solo con usuario logeado (entiendo que añadiendo antes login o auth)<br>
 [] Enlaces realizados<br>
 </ul>
