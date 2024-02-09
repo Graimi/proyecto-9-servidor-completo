@@ -1,4 +1,4 @@
-const { Franchise } = require('../api/models/mongo');
+const { Franchise } = require('../api/models/models');
 
 const getAllFranchisesFromDB = async (filter) => {
   const nameFilterOptions = {
