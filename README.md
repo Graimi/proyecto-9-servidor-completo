@@ -168,6 +168,7 @@ const Franchises = {
 [✅] PUT to update SciFiArtifact's Franchise<br>
 [] User controllers<br>
 [] Tipo GET públicos, resto solo con usuario logeado (entiendo que añadiendo antes login o auth)<br>
+[] Quitar código comentado<br>
 [] Enlaces realizados<br>
 
 <li> [] middlewares </li>

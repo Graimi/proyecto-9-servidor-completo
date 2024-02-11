@@ -1,16 +1,14 @@
 const { SciFiArtifact, Franchise } = require('../api/models/models');
 
 const getSciFiArtifactAndRelatedFromDB = async (id) => {
-  const sciFiArtifact = await SciFiArtifact.findById(id).populate({
-    path: 'franchiseId',
-  });
+  const sciFiArtifact = await SciFiArtifact.findById(id).populate(
+    'franchiseId'
+  );
   return sciFiArtifact;
 };
 
 const getFranchiseAndRelatedFromDB = async (id) => {
-  const franchise = await Franchise.findById(id).populate({
-    path: 'artifacts',
-  });
+  const franchise = await Franchise.findById(id).populate('artifacts');
   return franchise;
 };
 
