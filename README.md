@@ -93,7 +93,7 @@ const Franchises = {
 
 </ul>
 
-[] La API debe estar limitada a 50 peticiones cada 3 minutos.<br>
+[✅] La API debe estar limitada a 50 peticiones cada 3 minutos.<br>
 [] Existirá un endpoint `/auth/avatar` de tipo POST que permita añadir un avatar a un usuario que obtendrás por medio de un JWT válido. De forma que el usuario que hace la petición pueda subir una imagen a través de Thunder Client y subirla a Cloudinary, editando su documento correspondiente en MongoDB.<br>
 [✅] Existirá un endpoint para uno de los modelos relacionados entre si que permita, dada su id, subir una imagen para dicho documento en Cloudinary y edite el documento con un nuevo campo `image: 'url_de_la_imagen'`.<br>
 

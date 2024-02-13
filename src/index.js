@@ -17,6 +17,31 @@ cloudinary.config({
 
 app.use(express.json());
 
+// Aplicamos el código para el límite de solicitudes al servidor
+const limiter = rateLimit({
+  windowMs: 3 * 60 * 1000, // 3 minutos
+  limit: 50, // limite de 50 peticiones
+  standardHeaders: false,
+  legacyHeaders: false,
+});
+app.use(limiter);
+
+// Establecemos un límite para no saturar el servidor
+app.use(express.json({ limit: '1mb' }));
+
+// Formateamos correctamente la información que nos llega
+app.use(express.urlencoded({ limit: '1mb', extended: true }));
+
+// Especificamos que headers se pueden usar y que tipo de respuesta se puede poner
+app.use((_req, res, next) => {
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Methods', 'Content-Type');
+  next();
+});
+
+// Configuramos para que no se vea el siguiente header específico y así evitar la visualización de información sensible
+app.disable('x-powered-by')
+
 // Creamos el middleware de las rutas en /api
 app.use('/api', mainRouter);
 
