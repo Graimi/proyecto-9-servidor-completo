@@ -3,6 +3,7 @@ require('dotenv').config();
 const mainRouter = require('./api/routes/indexRouter');
 const connectDB = require('./config/db');
 const { setError } = require('./config/error');
+const { default: rateLimit } = require('express-rate-limit');
 const cloudinary = require('cloudinary').v2;
 
 const app = express();

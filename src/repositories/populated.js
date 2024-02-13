@@ -26,7 +26,7 @@ const updateFranchiseofScifiArtifactInDB = async (id, payload, file) => {
       deleteFile(oldFranchise.image);
     }
   }
-
+  
   delete newFranchiseData._id;
 
   const franchisedUpdated = await Franchise.findByIdAndUpdate(

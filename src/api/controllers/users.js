@@ -1,5 +1,5 @@
 const { setError } = require('../../config/error');
-const { registerUserInDB, loginUserInDB } = require('../../repositories/users');
+const { registerUserInDB, loginUserInDB, avatarUserInDB } = require('../../repositories/users');
 
 const registerUser = async (req, res, next) => {
   try {
@@ -19,7 +19,18 @@ const loginUser = async (req, res, next) => {
   }
 };
 
+const avatarUser = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const userUpdated = await avatarUserInDB(id, req.body, req.file);
+    return res.status(200).json(userUpdated);
+  } catch (error) {
+    return next(setError(400, 'Problem updating avatar 🙃'));
+  }
+};
+
 module.exports = {
   registerUser,
   loginUser,
+  avatarUser
 };

@@ -20,6 +20,7 @@ const userSchema = new mongoose.Schema(
     email: { type: String, required: true },
     genre: String,
     age: Number,
+    avatar: String,
   },
   { collection: 'users' }
 );

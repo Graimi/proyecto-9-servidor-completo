@@ -1,6 +1,7 @@
 const { User } = require('../api/models/users');
 const bcrypt = require('bcrypt');
 const { generateSign } = require('../config/jwt');
+const { deleteFile } = require('../middlewares/deleteFile');
 
 const registerUserInDB = async (payload) => {
   try {
@@ -32,7 +33,27 @@ const loginUserInDB = async (payload) => {
   }
 };
 
+const avatarUserInDB = async (id, payload, file) => {
+  const oldUser = await User.findById(id);
+
+  const newUser = payload;
+
+  if (file) {
+    newUser.avatar = file.path;
+    if (oldUser.avatar) {
+      deleteFile(oldUser.avatar);
+    }
+  }
+
+  const userUpdated = await User.findByIdAndUpdate(id, newUser, {
+    new: true,
+  });
+
+  return userUpdated;
+};
+
 module.exports = {
   registerUserInDB,
   loginUserInDB,
+  avatarUserInDB,
 };
