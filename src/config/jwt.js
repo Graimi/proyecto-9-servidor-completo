@@ -1,8 +1,7 @@
 var jwt = require('jsonwebtoken');
 
-const signToken = (payload) => {
-  // Al final añadimos cuanto tarda en expirar el token
-  const token = jwt.sign(payload, process.env.JWT_TOKEN_SECRET, { expiresIn: 24 * 60 * 60 });
+const generateSign = (payload) => {
+  const token = jwt.sign({payload}, process.env.JWT_TOKEN_SECRET, { expiresIn: "1h" });
   return token;
 };
 
@@ -12,6 +11,6 @@ const verifyToken = (token) => {
 };
 
 module.exports = {
-  signToken,
+  generateSign,
   verifyToken,
 };
