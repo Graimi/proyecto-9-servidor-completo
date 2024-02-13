@@ -1,13 +1,19 @@
 const express = require('express');
 require('dotenv').config();
-// Creamos el soporte para peticiones
 const mainRouter = require('./api/routes/indexRouter');
 const connectDB = require('./config/db');
 const { setError } = require('./config/error');
+const cloudinary = require('cloudinary').v2;
 
 const app = express();
 
 connectDB();
+
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET,
+});
 
 app.use(express.json());
 

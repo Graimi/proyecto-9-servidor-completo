@@ -6,6 +6,7 @@ const sciFiArtifactSchema = new mongoose.Schema(
     description: String,
     type: String,
     powers: String,
+    image: String,
     franchiseId: { type: mongoose.Schema.Types.ObjectId, ref: 'Franchise' },
   },
   { collection: 'scifiartifacts' }
