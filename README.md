@@ -30,14 +30,20 @@ Endpoints para las franquicias<br>
 
 Endpoints para las relaciones<br>
 
-| HTTP Request | Endpoint                     | Descripción                                                                       |
-| ------------ | ---------------------------- | --------------------------------------------------------------------------------- |
-| GET          | /populated/scifiartifact/:id | Identifica un artefacto por su id y muestra las franquicias en las que aparece    |
-| GET          | /populated/franchise/:id     | Identifica una franquicia por su id y muestra los artefactos que aparecen en ella |
-| PUT          | /populated/scifiartifact/:id | Edita con que franquicia guarda relación el artefacto a través de body params     |
-| PUT          | /populated/franchise/:id     | Edita con que artefactos guarda relación una franquicia a través de body params   |
+| HTTP Request | Endpoint                     | Descripción                                                                                                                        |
+| ------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| GET          | /populated/scifiartifact/:id | Identifica un artefacto por su id y muestra las franquicias en las que aparece                                                     |
+| GET          | /populated/franchise/:id     | Identifica una franquicia por su id y muestra los artefactos que aparecen en ella                                                  |
+| PUT          | /populated/franchise/:id     | A partir del id de la franquicia se declaran en el body los artefactos con la que esta guarda relación mostrando el conjunto final |
+| PUT          | /populated/scifiartifact/:id | A partir del id de un artefacto se editan los datos de su franquicia, mostrándolos posteriormente por pantalla                     |
 
-|
+Endpoints para los usuarios<br>
+
+| HTTP Request | Endpoint               | Descripción                                                                       |
+| ------------ | ---------------------- | --------------------------------------------------------------------------------- |
+| POST         | /users/auth/register   | Registra y muestra un nuevo usuario                                               |
+| POST         | /users/auth/login      | Comprueba si la contraseña es correcta, logea al usuario y genera un token válido |
+| POST         | /users/auth/avatar/:id | Sube una imagen en la base de datos del usuario                                   |
 
 ### MODELOS:
 
@@ -50,6 +56,7 @@ const SciFiArtifacts = {
   description: 'Descripción del artefacto y sus características',
   type: 'Tipo de artefacto',
   powers: 'Poderes o funcionalidades especiales del artefacto',
+  image: 'Imagen del artefacto',
   franchiseId: 'ID de la franquicia a la que pertenece',
 };
 ```
@@ -66,11 +73,25 @@ const Franchises = {
 };
 ```
 
+Modelo para los usuarios
+
+```jsx
+const Franchises = {
+  _id: 'id del usuario',
+  user: 'Nombre del usuario',
+  password: 'Contraseña del usuario',
+  email: 'Email único del usuario',
+  genre: 'Género del usuario',
+  age: 'Edad del usuario',
+  avatar: 'Imagen del usuario',
+};
+```
+
 ## Criterios de aceptación
 
 <ul>
 
-[] **El servidor y la base de datos deben estar desplegados**, no necesitamos que corran en ningún puerto en específico ya que debes proveernos de una URL para probar el servidor.<br>
+[✅] **El servidor y la base de datos deben estar desplegados**, no necesitamos que corran en ningún puerto en específico ya que debes proveernos de una URL para probar el servidor.<br>
 [✅] Tendremos acceso al código en Github, asegúrate de no subir variables de entorno a la plataforma.<br>
 [✅] Debes tener un modelo `User` que cuente con endpoints para: <br>
 
@@ -102,23 +123,23 @@ const Franchises = {
 ## Organización
 
 <ul>
-<li> [] General </li>
-[] Desplegar el servidor<br>
+<li> [✅] General </li>
+[✅] Desplegar el servidor<br>
 [✅] Desplegar la base de datos<br>
 [✅] Proteger las variables de entorno<br>
 
 <li> [] README </li>
-[] Añadir la correción de endpoitns del otro proyecto y actualizar el de la image<br>
-[] Añadir los modelos correctos<br>
+[✅] Añadir la correción de endpoitns del otro proyecto y actualizar el de la image<br>
+[✅] Añadir los modelos correctos<br>
 [] Revisar que es correcto<br>
 
-<li> [] index → Almacenar archivos que actúan como puntos de entrada o partes del sistema</li>
+<li> [✅] index → Almacenar archivos que actúan como puntos de entrada o partes del sistema</li>
 [✅] Middleware declarado<br>
 [✅] Middleware para errores declarado<br>
 [✅] Puerto establecido <br>
 [✅] Enlaces realizados<br>
-[] API limitada a 50 peticiones cada 3 minutos<br>
-[] Resto de protecciones a nuestro servidor<br>
+[✅] API limitada a 50 peticiones cada 3 minutos<br>
+[✅] Resto de protecciones a nuestro servidor<br>
 
 <li> [] config → Archivos con configuraciones</li>
 [✅] Configuración establecida con mongo atlas<br>
