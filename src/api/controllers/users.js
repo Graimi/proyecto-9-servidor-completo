@@ -1,9 +1,29 @@
-const { getAllUsersFromDB } = require('../../repositories/users');
+const { setError } = require('../../config/error');
+const {
+  getAllUsersFromDB,
+  registerUserInDB,
+} = require('../../repositories/users');
 
 const getAllUsers = async (req, res, next) => {
   const { filter } = req.query;
   const user = await getAllUsersFromDB(filter);
   res.status(200).json({ data: user });
+};
+
+const registerUser = async (req, res, next) => {
+  try {
+    const newUser = await registerUserInDB(req.body);
+    return res.status(201).json(newUser);
+  } catch (error) {
+    return next(setError(400, 'Not able to register 🙃'));
+  }
+};
+
+const loginUser = async (req, res, next) => {
+  try {
+  } catch (error) {
+    return next(setError(400, 'Not able to login 🙃'));
+  }
 };
 
 //   const getUsersById = async (req, res, next) => {
@@ -32,4 +52,5 @@ const getAllUsers = async (req, res, next) => {
 
 module.exports = {
   getAllUsers,
+  registerUser,
 };

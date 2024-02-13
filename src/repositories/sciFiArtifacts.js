@@ -1,4 +1,4 @@
-const { SciFiArtifact } = require('../api/models/models');
+const { SciFiArtifact } = require('../api/models/sciFiArtifacts');
 
 const getAllSciFiArtifactsFromDB = async (filter) => {
   const nameFilterOptions = {

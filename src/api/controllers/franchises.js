@@ -25,9 +25,7 @@ const getFranchisesById = async (req, res, next) => {
 
 const createFranchises = async (req, res, next) => {
   try {
-    const newFranchise = await createFranchiseInDB({
-      name: req.body.name,
-    });
+    const newFranchise = await createFranchiseInDB(req.body);
     res.status(201).json({ data: newFranchise });
   } catch (error) {
     return next(setError(400, 'Not able to create franchise 🙃'));

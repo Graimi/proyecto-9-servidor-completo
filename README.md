@@ -76,7 +76,9 @@ const Franchises = {
 
 <ul>
 
-- []  Un enpoint `/auth/register` que permita registrar un nuevo usuario. El email no puede estar repetido y la contraseña debe tener al menos 6 caracteres, una minúscula y una mayúscula. <br>
+- []  Un enpoint `/auth/register` que permita registrar un nuevo usuario.<br>
+- []  El email no puede estar repetido.<br>
+- []  La contraseña debe tener al menos 6 caracteres, una minúscula y una mayúscula.<br>
 - []  Un endpoint `/auth/login` que permita logearse con un usuario ya registrado y devuelva un JWT. <br>
 - []  El **JWT** debe tener una caducidad de una hora.<br>
 

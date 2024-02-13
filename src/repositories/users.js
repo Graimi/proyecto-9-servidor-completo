@@ -1,4 +1,4 @@
-const { User } = require('../api/models/models');
+const { User } = require('../api/models/users');
 
 const getAllUsersFromDB = async (filter) => {
   const nameFilterOptions = {
@@ -8,28 +8,14 @@ const getAllUsersFromDB = async (filter) => {
   return user;
 };
 
-// const getUsersByIdFromDB = async (id) => {
-//   const User = await User.findById(id);
-//   return User;
-// };
-
-// const createUserInDB = async (payload) => {
-//   const newUser = new User(payload);
-//   await newUser.save();
-//   return newUser;
-// };
-
-// const updateUserInDB = async (id, payload) => {
-//   const User = await User.findByIdAndUpdate(id, payload, {
-//     new: true,
-//   });
-//   return User;
-// };
-
-// const deleteUserInDB = async (id) => {
-//   await User.deleteOne({ _id: id });
-// };
+const registerUserInDB = async (payload) => {
+  const newUser = new User(payload);
+  await newUser.save();
+  return newUser;
+};
 
 module.exports = {
   getAllUsersFromDB,
+  registerUserInDB,
+  //   loginUser,
 };
