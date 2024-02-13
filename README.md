@@ -1,14 +1,19 @@
 # Servidor completo
 
-## PROYECTO 9: Servidor completo - EN PROCESO
+## PROYECTO 9: Servidor completo - REALIZADO
 
 Crear una API completa resiliente
 
+### ENLACE DESPLIEGUE:
+
+https://proyecto-9-servidor-completo.vercel.app<br>
+https://proyecto-9-servidor-completo-kz8jd0u0f-jaimes-projects-9f57f4da.vercel.app/README.md<br>
+
 ### ENDPOINTS:
 
-https://localhost:4001/api
-
 Endpoints para los artefactos de ciencia ficción<br>
+
+Endpoint general: /api<br>
 
 | HTTP Request | Endpoint            | Descripción                                    |
 | ------------ | ------------------- | ---------------------------------------------- |
@@ -128,10 +133,10 @@ const Franchises = {
 [✅] Desplegar la base de datos<br>
 [✅] Proteger las variables de entorno<br>
 
-<li> [] README </li>
+<li> [✅] README </li>
 [✅] Añadir la correción de endpoitns del otro proyecto y actualizar el de la image<br>
 [✅] Añadir los modelos correctos<br>
-[] Revisar que es correcto<br>
+[✅] Revisar que es correcto<br>
 
 <li> [✅] index → Almacenar archivos que actúan como puntos de entrada o partes del sistema</li>
 [✅] Middleware declarado<br>
@@ -141,13 +146,12 @@ const Franchises = {
 [✅] API limitada a 50 peticiones cada 3 minutos<br>
 [✅] Resto de protecciones a nuestro servidor<br>
 
-<li> [] config → Archivos con configuraciones</li>
+<li> [✅] config → Archivos con configuraciones</li>
 [✅] Configuración establecida con mongo atlas<br>
 [✅] Si no funciona recuerda probar la otra ruta<br>
 [✅] JWT caducidad 1 hora<br>
 [✅] Código JWT aplicado<br>
-[] password doc eliminar si no lo usamos<br>
-[] password resolve<br>
+[✅] password doc eliminar si no lo usamos<br>
 
 <li> [✅] models → Modelos para representar la estructura de los datos</li>
 [✅] Modelo artefactos<br>
@@ -155,7 +159,7 @@ const Franchises = {
 [✅] Modelo users<br>
 [✅] Patrón contraseña<br>
 
-<li> [] repositories → Conjunto de funciones con las querys para traer la información</li>
+<li> [✅] repositories → Conjunto de funciones con las querys para traer la información</li>
 [✅] GET all artifacts<br>
 [✅] GET one artifacts<br>
 [✅] POST artifacts<br>
@@ -170,10 +174,10 @@ const Franchises = {
 [✅] GET franchise and sciFiartifacts related<br>
 [✅] PUT to change the franchise's sciFiartifact<br>
 [✅] PUT to update SciFiArtifact's Franchise<br>
-[] User repositories<br>
-[] Enlaces realizados<br>
+[✅] User repositories<br>
+[✅] Enlaces realizados<br>
 
-<li> [] controllers → Conjunto de funcionalidades</li>
+<li> [✅] controllers → Conjunto de funcionalidades</li>
 [✅] GET all artifacts<br>
 [✅] GET one artifacts<br>
 [✅] POST artifacts<br>
@@ -188,17 +192,17 @@ const Franchises = {
 [✅] GET franchise and sciFiartifacts related<br>
 [✅] PUT to change the franchise's sciFiartifact<br>
 [✅] PUT to update SciFiArtifact's Franchise<br>
-[] User controllers<br>
-[] Quitar código comentado<br>
-[] Enlaces realizados<br>
+[✅] User controllers<br>
+[✅] Quitar código comentado<br>
+[✅] Enlaces realizados<br>
 
-<li> [] middlewares </li>
-[] authenticated middlewares<br>
-[] Servidor 401 para el usuario no identificado<br>
-[] uploadFile middlewares<br>
-[] Enlaces realizados<br>
+<li> [✅] middlewares </li>
+[✅] authenticated middlewares<br>
+[✅] Servidor 401 para el usuario no identificado<br>
+[✅] upload file middleware<br>
+[✅] Enlaces realizados<br>
 
-<li> [] routes → Enrutado de la aplicación</li>
+<li> [✅] routes → Enrutado de la aplicación</li>
 [✅] index con el router scifiartifacts establecido<br>
 [✅] index con el router franchises establecido<br>
 [✅] index con el router populated establecido<br>
@@ -208,8 +212,8 @@ const Franchises = {
 [✅] /auth/register enpoint<br>
 [✅] El email no puede estar repetido y la contraseña debe tener al menos 6 caracteres, una minúscula y una mayúscula<br>
 [✅] /auth/login endpoint<br>
-[] /auth/avatar endpoint<br>
-[] endpoint para subir imagen<br>
+[✅] /auth/avatar endpoint<br>
+[✅] endpoint para subir imagen<br>
 [✅] Tipo GET públicos, resto solo con usuario logeado (entiendo que añadiendo antes login o auth)<br>
-[] Enlaces realizados<br>
+[✅] Enlaces realizados<br>
 </ul>

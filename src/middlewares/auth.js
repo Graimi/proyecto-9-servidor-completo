@@ -7,7 +7,7 @@ const isAuth = async (req, res, next) => {
     const token = req.headers.authorization;
 
     if (!token) {
-      return next(setError(400, 'Not authorized 🙃'));
+      return next(setError(401, 'Not authorized 🙃'));
     }
 
     const parsedToken = token.replace('Bearer ', '');
@@ -17,7 +17,7 @@ const isAuth = async (req, res, next) => {
     req.user = userLogued;
     next();
   } catch (error) {
-    return next(setError(400, 'Token incorrect 🙃'));
+    return next(setError(401, 'Token incorrect 🙃'));
   }
 };
 
