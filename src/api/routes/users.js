@@ -7,7 +7,8 @@ const usersRouter = express.Router();
 
 usersRouter.post('/auth/register', registerUser);
 usersRouter.post('/auth/login', loginUser);
-usersRouter.post(
+// usersRouter.post(
+usersRouter.put(
   '/auth/avatar/:id',
   [isAuth],
   upload.single('avatar'),

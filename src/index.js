@@ -1,14 +1,17 @@
-const express = require('express');
 require('dotenv').config();
-const mainRouter = require('./api/routes/indexRouter');
+const express = require('express');
 const connectDB = require('./config/db');
-const { setError } = require('./config/error');
-const { default: rateLimit } = require('express-rate-limit');
+const cors = require("cors");
 const cloudinary = require('cloudinary').v2;
+const { default: rateLimit } = require('express-rate-limit');
+const mainRouter = require('./api/routes/indexRouter');
+const { setError } = require('./config/error');
 
 const app = express();
 
 connectDB();
+
+app.use(cors());
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
